@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Philiprehberger.ValueOf</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Philip Rehberger</Authors>
+    <Description>Strongly-typed value objects with built-in validation and JSON support — eliminate primitive obsession</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/philiprehberger/dotnet-value-of</RepositoryUrl>
+    <PackageTags>value-object;ddd;strong-typing;primitive-obsession;type-safe</PackageTags>
+  </PropertyGroup>
+
+</Project>
