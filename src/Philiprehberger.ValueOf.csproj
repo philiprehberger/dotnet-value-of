@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>Philiprehberger.ValueOf</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>Philip Rehberger</Authors>
     <Description>Strongly-typed value objects with built-in validation and JSON support — eliminate primitive obsession</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
