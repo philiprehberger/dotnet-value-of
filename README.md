@@ -6,7 +6,7 @@
 
 Strongly-typed value objects with built-in validation and JSON support — eliminate primitive obsession.
 
-## Install
+## Installation
 
 ```bash
 dotnet add package Philiprehberger.ValueOf
