@@ -17,6 +17,7 @@ jobs:
           dotnet-version: '8.0.x'
       - run: dotnet restore src/Philiprehberger.ValueOf.csproj
       - run: dotnet build src/Philiprehberger.ValueOf.csproj --configuration Release --no-restore
+      - run: dotnet test tests/Philiprehberger.ValueOf.Tests/Philiprehberger.ValueOf.Tests.csproj --configuration Release --no-restore
 
   publish:
     needs: build
