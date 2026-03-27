@@ -3,6 +3,7 @@
 [![CI](https://github.com/philiprehberger/dotnet-value-of/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/dotnet-value-of/actions/workflows/ci.yml)
 [![NuGet](https://img.shields.io/nuget/v/Philiprehberger.ValueOf.svg)](https://www.nuget.org/packages/Philiprehberger.ValueOf)
 [![License](https://img.shields.io/github/license/philiprehberger/dotnet-value-of)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
 
 Strongly-typed value objects with built-in validation and JSON support — eliminate primitive obsession.
 
