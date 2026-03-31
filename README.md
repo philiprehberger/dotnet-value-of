@@ -2,8 +2,7 @@
 
 [![CI](https://github.com/philiprehberger/dotnet-value-of/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/dotnet-value-of/actions/workflows/ci.yml)
 [![NuGet](https://img.shields.io/nuget/v/Philiprehberger.ValueOf.svg)](https://www.nuget.org/packages/Philiprehberger.ValueOf)
-[![License](https://img.shields.io/github/license/philiprehberger/dotnet-value-of)](LICENSE)
-[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
+[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/dotnet-value-of)](https://github.com/philiprehberger/dotnet-value-of/commits/main)
 
 Strongly-typed value objects with built-in validation and JSON support — eliminate primitive obsession.
 
@@ -114,6 +113,24 @@ Marker attribute for decorating value object types. Reserved for future source g
 dotnet build src/Philiprehberger.ValueOf.csproj --configuration Release
 ```
 
+## Support
+
+If you find this project useful:
+
+⭐ [Star the repo](https://github.com/philiprehberger/dotnet-value-of)
+
+🐛 [Report issues](https://github.com/philiprehberger/dotnet-value-of/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+
+💡 [Suggest features](https://github.com/philiprehberger/dotnet-value-of/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+
+❤️ [Sponsor development](https://github.com/sponsors/philiprehberger)
+
+🌐 [All Open Source Projects](https://philiprehberger.com/open-source-packages)
+
+💻 [GitHub Profile](https://github.com/philiprehberger)
+
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/philiprehberger)
+
 ## License
 
-MIT
+[MIT](LICENSE)

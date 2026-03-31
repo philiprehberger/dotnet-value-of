@@ -7,7 +7,7 @@
     <LangVersion>latest</LangVersion>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <PackageId>Philiprehberger.ValueOf</PackageId>
-    <Version>0.1.6</Version>
+    <Version>0.1.7</Version>
     <Authors>Philip Rehberger</Authors>
     <Description>Strongly-typed value objects with built-in validation and JSON support — eliminate primitive obsession.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
