@@ -53,6 +53,31 @@ PositiveInt.From(-1);        // throws ValueOfValidationException
 Percentage.From(101m);       // throws ValueOfValidationException
 ```
 
+### Non-throwing creation with `TryFrom`
+
+```csharp
+using Philiprehberger.ValueOf;
+
+if (PositiveInt.TryFrom(userInput, out var positive))
+{
+    Console.WriteLine($"Got {positive!.Value}");
+}
+else
+{
+    Console.WriteLine("Invalid value, no exception raised.");
+}
+```
+
+### Additional built-in types
+
+```csharp
+using Philiprehberger.ValueOf;
+
+var clicks = NonNegativeInt.From(0);
+var ratio = UnitInterval.From(0.75m);          // 0 ≤ value ≤ 1
+var name = NonEmptyTrimmedString.From("  hi "); // stores "hi"
+```
+
 ### JSON serialization
 
 ```csharp
@@ -72,7 +97,8 @@ var back = JsonSerializer.Deserialize<EmailAddress>(json, options);
 | Member | Description |
 |--------|-------------|
 | `Value` | The underlying primitive value |
-| `From(TValue)` | Creates a validated instance |
+| `From(TValue)` | Creates a validated instance (throws on null/invalid) |
+| `TryFrom(TValue, out TSelf?)` | Non-throwing variant; returns `false` on validation failure |
 | `Validate()` | Override to add custom validation logic |
 | `Equals(TSelf)` | Value-based equality |
 | `CompareTo(TSelf)` | Value-based comparison |
@@ -100,8 +126,11 @@ var back = JsonSerializer.Deserialize<EmailAddress>(json, options);
 | Type | Wraps | Validation |
 |------|-------|------------|
 | `NonEmptyString` | `string` | Not null or empty |
+| `NonEmptyTrimmedString` | `string` | Not null/empty after trimming whitespace; stored trimmed |
 | `PositiveInt` | `int` | Greater than 0 |
+| `NonNegativeInt` | `int` | Greater than or equal to 0 |
 | `Percentage` | `decimal` | Between 0 and 100 inclusive |
+| `UnitInterval` | `decimal` | Between 0 and 1 inclusive |
 
 ### `ValueOfAttribute`
 

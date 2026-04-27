@@ -20,9 +20,9 @@ public class BuiltInTypesTests
     }
 
     [Fact]
-    public void NonEmptyString_WithNull_ThrowsValidationException()
+    public void NonEmptyString_WithNull_ThrowsArgumentNullException()
     {
-        Assert.Throws<ValueOfValidationException>(() => NonEmptyString.From(null!));
+        Assert.Throws<ArgumentNullException>(() => NonEmptyString.From(null!));
     }
 
     [Fact]
@@ -70,5 +70,49 @@ public class BuiltInTypesTests
     public void Percentage_WithOutOfRangeValues_ThrowsValidationException(decimal value)
     {
         Assert.Throws<ValueOfValidationException>(() => Percentage.From(value));
+    }
+
+    [Fact]
+    public void NonNegativeInt_AcceptsZeroAndPositive()
+    {
+        Assert.Equal(0, NonNegativeInt.From(0).Value);
+        Assert.Equal(5, NonNegativeInt.From(5).Value);
+    }
+
+    [Fact]
+    public void NonNegativeInt_RejectsNegative()
+    {
+        Assert.Throws<ValueOfValidationException>(() => NonNegativeInt.From(-1));
+    }
+
+    [Theory]
+    [InlineData(0)]
+    [InlineData(0.5)]
+    [InlineData(1)]
+    public void UnitInterval_AcceptsValuesInZeroOneInclusive(decimal value)
+    {
+        Assert.Equal(value, UnitInterval.From(value).Value);
+    }
+
+    [Theory]
+    [InlineData(-0.0001)]
+    [InlineData(1.0001)]
+    public void UnitInterval_RejectsOutOfRange(decimal value)
+    {
+        Assert.Throws<ValueOfValidationException>(() => UnitInterval.From(value));
+    }
+
+    [Fact]
+    public void NonEmptyTrimmedString_TrimsAndAccepts()
+    {
+        Assert.Equal("hi", NonEmptyTrimmedString.From("  hi  ").Value);
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("   ")]
+    public void NonEmptyTrimmedString_RejectsBlank(string value)
+    {
+        Assert.Throws<ValueOfValidationException>(() => NonEmptyTrimmedString.From(value));
     }
 }

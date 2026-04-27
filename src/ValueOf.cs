@@ -21,13 +21,43 @@ public abstract class ValueOf<TValue, TSelf> : IEquatable<TSelf>, IComparable<TS
     /// </summary>
     /// <param name="value">The underlying value to wrap.</param>
     /// <returns>A validated instance of the value object.</returns>
+    /// <exception cref="ArgumentNullException">Thrown when <paramref name="value"/> is null.</exception>
     /// <exception cref="ValueOfValidationException">Thrown when validation fails.</exception>
     public static TSelf From(TValue value)
     {
+        ArgumentNullException.ThrowIfNull(value);
+
         var instance = new TSelf();
         instance.Value = value;
         instance.Validate();
         return instance;
+    }
+
+    /// <summary>
+    /// Attempts to create a new instance from the given value, returning <c>false</c> on validation failure
+    /// instead of throwing.
+    /// </summary>
+    /// <param name="value">The underlying value to wrap.</param>
+    /// <param name="instance">The created instance when successful; otherwise <c>null</c>.</param>
+    /// <returns><c>true</c> when the value passes validation; otherwise <c>false</c>.</returns>
+    public static bool TryFrom(TValue value, out TSelf? instance)
+    {
+        if (value is null)
+        {
+            instance = null;
+            return false;
+        }
+
+        try
+        {
+            instance = From(value);
+            return true;
+        }
+        catch (ValueOfValidationException)
+        {
+            instance = null;
+            return false;
+        }
     }
 
     /// <summary>

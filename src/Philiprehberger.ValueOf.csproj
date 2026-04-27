@@ -6,16 +6,17 @@
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
     <PackageId>Philiprehberger.ValueOf</PackageId>
-    <Version>0.1.7</Version>
+    <Version>0.2.0</Version>
     <Authors>Philip Rehberger</Authors>
     <Description>Strongly-typed value objects with built-in validation and JSON support — eliminate primitive obsession.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/philiprehberger/dotnet-value-of</RepositoryUrl>
-    <PackageTags>value-object;ddd;strong-typing;primitive-obsession;type-safe</PackageTags>
-    <RepositoryType>git</RepositoryType>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>value-object;ddd;strong-typing;primitive-obsession;type-safe</PackageTags>
+    <RepositoryUrl>https://github.com/philiprehberger/dotnet-value-of</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>

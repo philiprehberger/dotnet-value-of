@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 (2026-04-27)
+
+- Add `ValueOf<,>.TryFrom(value, out instance)` for non-throwing parsing pipelines
+- Add `ArgumentNullException` guard in `From` so a null primitive surfaces as a clear runtime error
+- Add built-in types `NonNegativeInt`, `UnitInterval`, and `NonEmptyTrimmedString`
+- Reorder `.csproj` fields to match the standardized template
+- Pin CI workflow to `actions/checkout@v5`
+
 ## 0.1.7 (2026-03-31)
 
 - Standardize README to 3-badge format with emoji Support section
