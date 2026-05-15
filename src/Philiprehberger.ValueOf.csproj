@@ -14,7 +14,6 @@
     <Description>Strongly-typed value objects with built-in validation and JSON support — eliminate primitive obsession.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageIcon>package-card.png</PackageIcon>
     <PackageTags>value-object;ddd;strong-typing;primitive-obsession;type-safe</PackageTags>
     <RepositoryUrl>https://github.com/philiprehberger/dotnet-value-of</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -22,7 +21,6 @@
 
   <ItemGroup>
     <None Include="..\README.md" Pack="true" PackagePath="\" />
-    <None Include="..\package-card.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
